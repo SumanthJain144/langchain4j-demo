@@ -1,0 +1,35 @@
+plugins {
+    id 'java'
+}
+
+allprojects {
+    group = 'com.example'
+    version = '1.0.0'
+}
+
+subprojects {
+    apply plugin: 'java'
+
+    java {
+        sourceCompatibility = JavaVersion.VERSION_21
+        targetCompatibility = JavaVersion.VERSION_21
+    }
+
+    repositories {
+        mavenCentral()
+    }
+
+    // Common dependency versions
+    ext {
+        langchain4jVersion = '0.36.2'
+    }
+
+    dependencies {
+        // LangChain4j core
+        implementation "dev.langchain4j:langchain4j:${langchain4jVersion}"
+        implementation "dev.langchain4j:langchain4j-open-ai:${langchain4jVersion}"
+
+        // Logging
+        implementation 'org.slf4j:slf4j-simple:2.0.9'
+    }
+}

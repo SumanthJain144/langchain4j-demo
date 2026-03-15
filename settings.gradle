@@ -1,0 +1,5 @@
+rootProject.name = 'langchain4j-demos'
+
+include 'demo1_llm'
+include 'demo5_rag'
+include 'demo6_agent'

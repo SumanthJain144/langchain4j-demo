@@ -1,0 +1,15 @@
+// Demo 1: LLM Basic Request/Response & Streaming
+// Run: ./gradlew :demo1_llm:run -Pmain=com.example.demo1_llm.Demo1LlmBasic
+//      ./gradlew :demo1_llm:run -Pmain=com.example.demo1_llm.Demo1Streaming
+
+plugins {
+    id 'application'
+}
+
+application {
+    mainClass = project.findProperty('main') ?: 'com.example.demo1_llm.Demo1LlmBasic'
+}
+
+dependencies {
+    // no extra deps needed — core + openai included from root
+}

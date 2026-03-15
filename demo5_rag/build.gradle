@@ -1,0 +1,8 @@
+// Demo 5: RAG — Retrieval Augmented Generation
+// Run: ./gradlew :demo5_rag:run
+plugins { id 'application' }
+application { mainClass = 'com.example.demo5_rag.Demo5Rag' }
+
+dependencies {
+    implementation "dev.langchain4j:langchain4j-document-parser-apache-tika:${langchain4jVersion}"
+}

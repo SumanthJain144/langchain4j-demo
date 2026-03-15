@@ -1,0 +1,13 @@
+// Demo 7: AI Agent Orchestration
+// Run: ./gradlew :demo6_agent:run -Pmain=com.example.demo6_agent.Demo7SequentialAgent
+//      ./gradlew :demo6_agent:run -Pmain=com.example.demo6_agent.Demo7ParallelAgent
+//      ./gradlew :demo6_agent:run -Pmain=com.example.demo6_agent.Demo7LoopAgent
+
+plugins { id 'application' }
+application {
+    mainClass = project.findProperty('main') ?: 'com.example.demo6_agent.Demo7SequentialAgent'
+}
+
+dependencies {
+    implementation "dev.langchain4j:langchain4j-embeddings-all-minilm-l6-v2:${langchain4jVersion}"
+}
